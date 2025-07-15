@@ -1,1 +1,17 @@
 @import 'tailwindcss';
+@keyframes emojiFall {
+	to {
+		transform: translateY(110vh);
+		opacity: 0;
+	}
+}
+
+.emoji-drop {
+	position: fixed;
+	top: -40px;
+	pointer-events: none;
+	z-index: 9999;
+	animation-name: emojiFall;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
